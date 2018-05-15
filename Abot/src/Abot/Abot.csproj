@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.9.9" />
-    <PackageReference Include="HtmlAgilityPack.NetCore" Version="1.5.0.1" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.0.2" />
     <PackageReference Include="System.Collections.Specialized" Version="4.0.1" />
     <PackageReference Include="NRobotsCore" Version="1.1.2" />
@@ -38,12 +38,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.0.2" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
-    <PackageReference Include="System.Net.Http" Version="4.1.1" />
-  </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <PackageReference Include="Microsoft.Net.Http" Version="2.2.22" />
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
