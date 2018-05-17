@@ -1001,7 +1001,7 @@ namespace Abot.Crawler
             
             string abotVersion = typeof(WebCrawler).GetTypeInfo().Assembly.GetName().Version.ToString();
             _logger.LogInformation($"{indentString}Abot Version: {abotVersion}");
-            foreach (PropertyInfo property in config.GetType().GetProperties())
+            foreach (PropertyInfo property in config.GetType().GetTypeInfo().GetProperties())
             {
                 if (property.Name != "ConfigurationExtensions")
                     _logger.LogInformation($"{indentString}{property.Name}: {property.GetValue(config, null)}");

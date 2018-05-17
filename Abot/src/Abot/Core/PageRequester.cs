@@ -139,7 +139,7 @@ namespace Abot.Core
         //Do not mark as virtual, could cause issues in inheritance constructoring calling
         private HttpMessageHandler BuildHttpClientHandler()
         {
-#if NETSTANDARD1_6
+#if NETSTANDARD1_6_1
             var handler = new HttpClientHandler();
 #elif NET46
             var handler = new WebRequestHandler();
@@ -167,7 +167,7 @@ namespace Abot.Core
             //    handler.UseDefaultCredentials = false;
             //}
 
-#if NETSTANDARD1_6
+#if NETSTANDARD1_6_1
 
             if (!_config.IsSslCertificateValidationEnabled)
             {

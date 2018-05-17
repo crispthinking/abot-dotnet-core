@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <Description>.NET Core port of sjdirect/abot. Abot is an open source C# web crawler built for speed and flexibility. It takes care of the low level plumbing (multithreading, http requests, scheduling, link parsing, etc..). You just register for events to process the page data. You can also plugin your own implementations of core interfaces to take complete control over the crawl process.</Description>
@@ -30,8 +30,11 @@
     <None Include="App.config" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
+  <ItemGroup>
     <ProjectReference Include="..\Abot\Abot.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
@@ -42,11 +45,12 @@
     <PackageReference Include="AngleSharp" Version="0.9.9" />
     <PackageReference Include="NLog" Version="4.4.0-betaV15" />
     <PackageReference Include="NRobotsCore" Version="1.1.2" />
-    <PackageReference Include="Microsoft.DotNet.InternalAbstractions" Version="1.0.500-preview2-1-003177" />
+    <PackageReference Include="Microsoft.DotNet.InternalAbstractions" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.0.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.0.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.8.0" />
-    <PackageReference Include="system.net.http.winhttphandler" Version="4.0.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+    <PackageReference Include="system.net.http.winhttphandler" Version="4.4.0" />
     <PackageReference Include="NLog.Config" Version="4.3.9" />
     <PackageReference Include="NLog.Schema" Version="4.3.9" />
     <PackageReference Include="NUnit" Version="3.8.1" />

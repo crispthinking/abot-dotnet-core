@@ -80,7 +80,7 @@ namespace Abot.Util
     }
 #endif
 
-#if NETSTANDARD1_6
+#if NETSTANDARD1_6_1
     public class CoreMemoryManager : IMemoryManager
     {
         static ILogger _logger = new LoggerFactory().CreateLogger("AbotLogger");
